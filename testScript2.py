@@ -9,7 +9,7 @@ class CRUD(unittest.TestCase):
 
     def test_create(self):
         driver = self.driver
-        driver.get("http://www.python.org/")
+        driver.get("http://computer-database.herokuapp.com/computers")
 
     def test_read(self):
         driver = self.driver
