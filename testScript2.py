@@ -5,15 +5,15 @@ from selenium import webdriver
 class CRUD(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('.\chromedriver.exe')
+        self.driver = webdriver.Chrome('chromedriver.exe')
 
     def test_create(self):
         driver = self.driver
-        driver.get("http://www.python.org")
+        driver.get("http://www.python.org/")
 
     def test_read(self):
         driver = self.driver
-        driver.get("http://www.google.com")
+        driver.get("http://www.google.com/")
 
 
     def tearDown(self):
