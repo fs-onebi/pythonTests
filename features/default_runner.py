@@ -17,7 +17,5 @@ class Test_Suite(unittest.TestCase):
         runner = unittest.TextTestRunner()
         runner.run(self.suite)
 
-import unittest
-
 if __name__ == "__main__":
     unittest.main()
