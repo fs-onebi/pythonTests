@@ -3,6 +3,8 @@ import testScriptDelete
 import testScriptRead
 import testScriptCreate
 import testScriptUpdate
+import sys
+sys.path.append('../')
 from lib import HTMLTestRunner
 
 class Test_Suite(unittest.TestCase):

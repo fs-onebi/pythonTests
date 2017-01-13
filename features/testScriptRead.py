@@ -1,5 +1,7 @@
 import unittest
 from selenium import webdriver
+import sys
+sys.path.append('../')
 from lib import test_constants
 
 class Read(unittest.TestCase):
