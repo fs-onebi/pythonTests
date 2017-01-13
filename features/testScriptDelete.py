@@ -1,13 +1,13 @@
 import unittest
 from selenium import webdriver
 
-class Read(unittest.TestCase):
+class Delete(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome('../resources/chromedriver.exe')
 
     def test_read_computer_exist(self):
-        computerName = "ASCI Purple"
+        computerName = "Blue Dragon"
         driver = self.driver
 
         driver.get("http://computer-database.herokuapp.com/computers")
@@ -29,8 +29,12 @@ class Read(unittest.TestCase):
         self.assertTrue(listContainsValue, "List of computers not contain expected value: "+computerName+".")
         searchedElement.click()
 
-        actualComputerName = driver.find_element_by_id("name").get_attribute("value")
-        self.assertEqual(computerName, actualComputerName,"Displayed computer name '"+actualComputerName+"' in edit window is not the same as expected '"+computerName+"'.")
+        driver.find_element_by_class_name("btn danger").click()
+
+        messageSuccess = driver.find_element_by_xpath("//div[@class='alert-message warning']")
+        self.assertEqual(messageSuccess.text,
+                         "Done! Computer " + computerName + " has been deleted",
+                         "Text from success message not equals text: Done! Computer " + computerName + " has been deleted")
 
     def tearDown(self):
         self.driver.close()
