@@ -1,16 +1,17 @@
 import unittest
 from selenium import webdriver
+from lib import test_constants
 
 class Read(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('../resources/chromedriver.exe')
+        self.driver = webdriver.Chrome(test_constants.CHROMEDRIVER_PATH)
 
     def test_read_computer_exist(self):
         computerName = "ASCI Purple"
         driver = self.driver
 
-        driver.get("http://computer-database.herokuapp.com/computers")
+        driver.get(test_constants.COMPUTER_DATABASE_URL)
 
         driver.find_element_by_id("searchbox").send_keys(computerName)
 
