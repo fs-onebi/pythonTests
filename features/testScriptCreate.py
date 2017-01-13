@@ -1,10 +1,13 @@
 import unittest
 from selenium import webdriver
+import sys
+sys.path.append('../')
+from lib import test_constants
 
 class Create(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('../resources/chromedriver.exe')
+        self.driver = webdriver.Chrome(test_constants.CHROMEDRIVER_PATH)
         self.driver.maximize_window()
 
     def test_adding_computer(self):
