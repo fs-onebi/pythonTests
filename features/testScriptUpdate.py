@@ -37,7 +37,13 @@ class Update(unittest.TestCase):
 
         time.sleep(2)
 
-        driver.find_elements_by_xpath("//input[ @ value = 'Save this computer']").click()
+        # driver.find_elements_by_xpath("//input[@value='Save this computer']").click()
+        #
+        # message = driver.find_element_by_xpath("//div[@class='alert-message warning']")
+        #
+        # self.assertEqual(message.text,
+        #                  "Done!  Computer IBM 7030 has been updated",
+        #                  "Text from success message not equals text: Done! Computer has been updated")
 
     def tearDown(self):
         self.driver.close()
