@@ -44,6 +44,7 @@ class Update(unittest.TestCase):
                           "Text from success message not equals text: Done! Computer has been updated")
     def tearDown(self):
         self.driver.close()
+        self.driver.quit()
 
 if __name__ == "__main__":
     unittest.main()
