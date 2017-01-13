@@ -9,7 +9,7 @@ class Update(unittest.TestCase):
         self.driver = webdriver.Chrome(test_constants.CHROMEDRIVER_PATH)
         self.driver.maximize_window()
 
-    def test_adding_computer(self):
+    def test_update_computer(self):
         computerName = "IBM 7030"
         discontinuedDate = "2015-06-07"
 
@@ -40,7 +40,7 @@ class Update(unittest.TestCase):
         message = driver.find_element_by_xpath("//div[@class='alert-message warning']")
 
         self.assertEqual(message.text,
-                          "Done!  Computer IBM 7030 has been updated",
+                          "Done! Computer IBM 7030 has been updated",
                           "Text from success message not equals text: Done! Computer has been updated")
     def tearDown(self):
         self.driver.close()

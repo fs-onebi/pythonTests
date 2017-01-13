@@ -8,7 +8,7 @@ class Delete(unittest.TestCase):
         self.driver = webdriver.Chrome(test_constants.CHROMEDRIVER_PATH)
         self.driver.maximize_window()
 
-    def test_read_computer_exist(self):
+    def test_delete_computer(self):
         computerName = "Blue Dragon"
         driver = self.driver
 
