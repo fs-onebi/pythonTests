@@ -12,8 +12,8 @@ class Test_Suite(unittest.TestCase):
         self.suite.addTests([
             unittest.defaultTestLoader.loadTestsFromTestCase(testScriptCreate.Create),
             unittest.defaultTestLoader.loadTestsFromTestCase(testScriptRead.Read),
-            unittest.defaultTestLoader.loadTestsFromTestCase(testScriptDelete.Delete),
-            unittest.defaultTestLoader.loadTestsFromTestCase(testScriptUpdate.Update)
+            unittest.defaultTestLoader.loadTestsFromTestCase(testScriptUpdate.Update),
+            unittest.defaultTestLoader.loadTestsFromTestCase(testScriptDelete.Delete)
         ])
         runner = unittest.TextTestRunner()
         runner.run(self.suite)
