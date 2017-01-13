@@ -6,6 +6,7 @@ class Update(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome('../resources/chromedriver.exe')
+        self.driver.maximize_window()
 
     def test_adding_computer(self):
         computerName = "IBM 7030"
